@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState, useEffect } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -16,23 +16,24 @@ const Contact = () => {
 
     setIsSubmitting(true);
 
-    emailjs.sendForm(
-      'service_qva50za',
-      'template_xods4ip',
-      form.current,
-      'LB2pshsQzJC6RzBzb'
-    )
-    .then(() => {
-      alert('Nachricht wurde erfolgreich gesendet!');
-      if (form.current) form.current.reset();
-    })
-    .catch((error) => {
-      console.error(error);
-      alert('Es gab einen Fehler beim Senden der Nachricht.');
-    })
-    .finally(() => {
-      setIsSubmitting(false);
-    });
+    emailjs
+      .sendForm(
+        "service_qva50za",
+        "template_xods4ip",
+        form.current,
+        "LB2pshsQzJC6RzBzb"
+      )
+      .then(() => {
+        alert("Nachricht wurde erfolgreich gesendet!");
+        if (form.current) form.current.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Es gab einen Fehler beim Senden der Nachricht.");
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -47,32 +48,41 @@ const Contact = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Lass uns sprechen!</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                Lass uns sprechen!
+              </h3>
               <p className="text-gray-600 mb-8">
-                Haben Sie ein spannendes Projekt oder eine Frage? Ich freue mich darauf, von Ihnen zu hören!
+                Haben Sie ein spannendes Projekt oder eine Frage? Ich freue mich
+                darauf, von Ihnen zu hören!
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-purple-600" />
-                  <a href="mailto:your@email.com" className="text-gray-600 hover:text-purple-600">
-                    minuciaundco@gmail.com
+                  <a
+                    href="mailto:nidialoha@gmail.com"
+                    className="text-gray-600 hover:text-purple-600"
+                  >
+                    nidialoha@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="w-5 h-5 text-purple-600" />
-                  <span className="text-gray-600">+49 123 45 67 890</span>
+                  <span className="text-gray-600">+49 178 58 38 558</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <MapPin className="w-5 h-5 text-purple-600" />
                   <span className="text-gray-600">Bramsche, Deutschland</span>
                 </div>
               </div>
-            </div>  
+            </div>
 
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
+            {/* <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Name
                 </label>
                 <input
@@ -84,7 +94,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   E-Mail
                 </label>
                 <input
@@ -96,7 +109,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Nachricht
                 </label>
                 <textarea
@@ -112,9 +128,9 @@ const Contact = () => {
                 disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 px-6 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
               >
-                {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
+                {isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
       </div>
