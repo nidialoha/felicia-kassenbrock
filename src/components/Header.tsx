@@ -1,6 +1,6 @@
-import React from 'react';
-import { Menu, X } from 'lucide-react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React from "react";
+import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -8,28 +8,29 @@ const Header = () => {
   const location = useLocation();
 
   const menuItems = [
-    { name: 'Home', id: 'home' },
-    { name: 'Projekte', id: 'projekte' },
-    { name: 'Über Mich', id: 'über-mich' },
-    { name: 'Hobbies', id: 'hobbies' },
-    { name: 'Kontakt', id: 'kontakt' }
+    { name: "Home", id: "home" },
+    { name: "Projekte", id: "projekte" },
+    { name: "Über Mich", id: "über-mich" },
+    { name: "Hobbies", id: "hobbies" },
+    { name: "Kontakt", id: "kontakt" },
   ];
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    
-    if (location.pathname !== '/') {
-      navigate('/');
+
+    if (location.pathname !== "/") {
+      navigate("/");
       setTimeout(() => {
         const element = document.getElementById(id);
         if (element) {
           const headerOffset = 80;
           const elementPosition = element.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
 
           window.scrollTo({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       }, 100);
@@ -38,11 +39,12 @@ const Header = () => {
       if (element) {
         const headerOffset = 80;
         const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        const offsetPosition =
+          elementPosition + window.pageYOffset - headerOffset;
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     }
@@ -54,16 +56,16 @@ const Header = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo - Left Side */}
-          <div 
-            className="flex flex-col cursor-pointer" 
-            onClick={() => navigate('/')}
+          <div
+            className="flex flex-col cursor-pointer"
+            onClick={() => navigate("/")}
           >
             <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-              minucia & co.
+              Felicia Kaßenbrock
             </span>
-            <span className="text-sm text-gray-800 -mt-1">
+            {/* <span className="text-sm text-gray-800 -mt-1">
               by Felicia Kaßenbrock
-            </span>
+            </span> */}
           </div>
 
           {/* Right Side - Menu Items and Mobile Button */}
