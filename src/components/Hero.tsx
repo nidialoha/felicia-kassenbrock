@@ -63,7 +63,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 rounded-full opacity-10 blur-xl"></div>
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <img
-                    src="src/image/felicia.png"
+                    src="felicia.png"
                     alt="Profile"
                     className="w-full h-full object-cover object-center"
                   />
