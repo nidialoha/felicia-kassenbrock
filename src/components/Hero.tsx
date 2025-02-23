@@ -72,7 +72,7 @@ const Hero = () => {
 
               <div className="flex gap-6">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/nidialoha"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
