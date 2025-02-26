@@ -80,7 +80,7 @@ const Hero = () => {
                   <Github className="w-6 h-6" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+                  href="https://linkedin.com/in/felicia-kaßenbrock-92565011b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
