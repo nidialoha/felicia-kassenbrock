@@ -4,7 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Felicia Kaßenbrock",
+      title: "Felicia Kaßenbrock - Persönliche Website",
       description:
         "Entwicklung und Gestaltung meiner eigenen Website als Abschlussprojekt der KI-Weiterbildung – Design und Programmierung eigenständig mit Unterstützung von Künstlicher Intelligenz umgesetzt.",
       image: "Felicia-Website.png",
@@ -60,7 +60,7 @@ const Projects = () => {
     {
       title: "intan inside",
       description:
-        "Design und Layout für das Mitarbeitermagazin Intan Inside – Erstellung eines ansprechenden und klar strukturierten Designs für interne News, abgestimmt auf das Corporate Design des Unternehmens.",
+        "Design und Layout für das Mitarbeitermagazin intan Inside – Erstellung eines ansprechenden und klar strukturierten Designs für interne News, abgestimmt auf das Corporate Design des Unternehmens.",
       image: "Buch_intan.jpg",
       tech: ["Adobe Indesign", "Adobe Photoshop"],
       github: "/link",
@@ -69,7 +69,7 @@ const Projects = () => {
     {
       title: "BloomPost",
       description:
-        "Gestaltung eines ansprechenden Flyers im Einklang mit dem Corporate Identity des Kunden – Verwendung markenspezifischer Farben und Designelemente, von der kreativen Konzeptentwicklung bis zur druckfertigen.",
+        "Gestaltung eines ansprechenden Flyers im Einklang mit der Corporate Identity des Kunden – Verwendung markenspezifischer Farben und Designelemente, von der kreativen Konzeptentwicklung bis zum druckfertigen Produkt.",
       image: "Flyer_Bloompost.jpg",
       tech: ["Adobe Illustrator", "Adobe Indesign"],
       github: "/link",
